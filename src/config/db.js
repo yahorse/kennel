@@ -11,10 +11,6 @@ const connectDB = async () => {
     throw new Error(
       'Database connection string is not configured. Set MONGO_URI (or MONGODB_URI / DATABASE_URL) before starting the server.'
     );
-  const mongoUri = process.env.MONGO_URI;
-
-  if (!mongoUri) {
-    throw new Error('MONGO_URI environment variable is not defined');
   }
 
   mongoose.set('strictQuery', true);
