@@ -28,6 +28,9 @@ Copy `server/.env.example` to `server/.env` and update the values:
 ```
 PORT=5000
 MONGO_URI=your-mongodb-connection-string
+# Optional aliases supported by the server:
+# MONGODB_URI=your-mongodb-connection-string
+# DATABASE_URL=your-mongodb-connection-string
 CLIENT_ORIGIN=http://localhost:5173
 JWT_SECRET=your-secret
 ```
