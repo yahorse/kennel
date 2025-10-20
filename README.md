@@ -1,5 +1,6 @@
 # Kennel Boarding Platform
 
+A full-stack MERN application scaffold for managing a dog kennel boarding business. The project is organized as a Render-ready monorepo with a React client and an Express + MongoDB API housed in the `src/` directory.
 A full-stack MERN application scaffold for managing a dog kennel boarding business. The project is organized as a Render-ready monorepo with separate client (React + Tailwind) and server (Express + MongoDB) workspaces.
 
 ## Project Structure
@@ -7,6 +8,7 @@ A full-stack MERN application scaffold for managing a dog kennel boarding busine
 ```
 .
 ├── client/   # React single-page app (Vite + Tailwind)
+└── src/      # Express API with Mongoose models
 └── server/   # Express API with Mongoose models
 ```
 
@@ -20,6 +22,7 @@ A full-stack MERN application scaffold for managing a dog kennel boarding busine
 
 ### Environment Variables
 
+Copy `src/.env.example` to `src/.env` and update the values:
 Copy `server/.env.example` to `server/.env` and update the values:
 
 ```
@@ -32,6 +35,7 @@ JWT_SECRET=your-secret
 ### Install Dependencies
 
 ```bash
+cd src
 cd server
 npm install
 
@@ -44,6 +48,7 @@ npm install
 In one terminal, start the backend:
 
 ```bash
+cd src
 cd server
 npm run dev
 ```
@@ -66,6 +71,7 @@ The client will run at `http://localhost:5173` and the API at `http://localhost:
 
 ## Deployment Notes
 
+- Configure the server service to use the `src` directory and run `npm start`, ensuring environment variables are set.
 - Configure the server to run `npm start` on Render, ensuring environment variables are set.
 - Build the client with `npm run build` and serve static assets via a CDN or Render static site service.
 - Update `VITE_API_URL` in the client environment to point to the deployed API URL.
